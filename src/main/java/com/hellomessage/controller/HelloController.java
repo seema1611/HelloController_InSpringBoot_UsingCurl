@@ -15,4 +15,9 @@ public class HelloController {
     public String sayHello(@RequestParam(value = "name") String name ) {
         return "Hello " +name+ "!";
     }
+
+    @GetMapping("/param/{name}")
+    public String sayHelloParam( @PathVariable String name ) {
+        return "Hello " +name+ "!";
+    }
 }
